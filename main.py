@@ -9,8 +9,8 @@ def degistir(body):
     return body.lower().replace(bakilacak,son.lower())
 
 def cevapal(eski,yeni):
-    return f"""{eski}?more like {yeni} 😎
-    ^ben ^bir ^bot
+    return f"""{eski}?more like {yeni} 😎\n
+    ^ben ^bir ^bot\n
     ^[github](https://github.com/gHuseyinabi/Bilim-Bot/)"""
 
 if test:

@@ -4,16 +4,20 @@ redditprefs = json.load(open("auth.json","r"))
 bakilacak = "inşallah"
 son = "bilim"
 reddit = praw.Reddit(**redditprefs)
-
+test = False
 def degistir(body):
     return body.lower().replace(bakilacak,son.lower())
 
 def cevapal(eski,yeni):
     return f"""{eski}?more like {yeni} 😎
-    ^ben ^bir ^bot"""
+    ^ben ^bir ^bot
+    ^[github](https://github.com/gHuseyinabi/Bilim-Bot/)"""
 
-
-for comment in reddit.subreddit('kgbtr').stream.comments(skip_existing=True):
+if test:
+    stream = reddit.subreddit('testyapiyorum').stream
+else:
+    stream = reddit.subreddit('kgbtr').stream
+for comment in stream.comments(skip_existing=True):
      cbody = comment.body
      if degistir(cbody) != cbody.lower() and not "bot" in cbody :
          comment.reply(cevapal(cbody,degistir(cbody)))

@@ -1,3 +1,3 @@
 # Bilim-Bot
-inşallahı bilimallahla değiştirir
+inşallahı inşbilimle değiştirir
 <hr><br>bu kadar
